@@ -36,11 +36,11 @@ LTC and CFC cells are computed on top of a network scaffold (a wiring)
   
     thought process:
   
-    hodgking huxley model has 4 equations:
+    hodgkin huxley model has 4 equations:
   
     - 1 for membrane capacitance -> depends on ionnic currents (core ode of the original ltc cell): ```dV/dt = (1/Cm) * [gleak(Vleak - V) + Σ(wi * si * (Ei - V))]``` (eq1)
   
-    - 3 for gating ionnic currents (K, Na, ) each with a different time variable (fast, medium, slow response)
+    - 3 for gating ionnic currents (K, 2*Na) each with a different time variable (fast, medium, slow response)
             . the fast channel reachs equilibrium value nearly instantly (let's discard it)
             . many biological neurons seem to be able to recover equilibrium without inactivation gates (let's discard it)
             . leaves out the K+ gating defined as ```dn/dt = (n∞(V) - n) / (τn + ε)``` (eq2)
@@ -50,7 +50,7 @@ LTC and CFC cells are computed on top of a network scaffold (a wiring)
 
 - wiring::v2
 
-    refactorr wiring for simplicity and more features
+    refactor wiring for simplicity and more features
   
     can create any number of layers
 
@@ -63,7 +63,7 @@ LTC and CFC cells are computed on top of a network scaffold (a wiring)
     mammalian cortex connection sparsity is around 90%, and the ratio of excitatory/inhibitory synapses is around 80/20
 
 next steps:
-wiring::v3 with multiple sensory layers
+wiring::v3 with multiple sensory/motor layers
 
 
 
