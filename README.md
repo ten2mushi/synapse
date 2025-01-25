@@ -32,11 +32,11 @@ LTC and CFC cells are computed on top of a network scaffold (a wiring)
 
 - cells::v2::ltc
 
-    is a refactor of the reference ltc cell with the incorporation of a second equation to model K+ gatind dynamics.
+    is a refactor of the reference ltc cell with the incorporation of a second equation to model K+ gating dynamics.
   
     thought process:
   
-    hodgkin huxley model has 4 equations:
+    hodgking huxley model has 4 equations:
   
     - 1 for membrane capacitance -> depends on ionnic currents (core ode of the original ltc cell): ```dV/dt = (1/Cm) * [gleak(Vleak - V) + Σ(wi * si * (Ei - V))]``` (eq1)
   
