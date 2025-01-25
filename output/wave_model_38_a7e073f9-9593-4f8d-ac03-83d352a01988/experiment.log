@@ -1,0 +1,412 @@
+2025-01-25T02:51:01.471120Z  INFO burn_train::learner::train_val: Fitting the model:
+ WaveModel {
+  ltc: LTC {
+    rnn_cell: LTCCell {
+      gleak: ParamTensor {rank: 1, shape: [12], kind: float}
+      vleak: ParamTensor {rank: 1, shape: [12], kind: float}
+      cm: ParamTensor {rank: 1, shape: [12], kind: float}
+      w: ParamTensor {rank: 2, shape: [12, 12], kind: float}
+      sigma: ParamTensor {rank: 2, shape: [12, 12], kind: float}
+      mu: ParamTensor {rank: 2, shape: [12, 12], kind: float}
+      sensory_w: ParamTensor {rank: 2, shape: [4, 12], kind: float}
+      sensory_sigma: ParamTensor {rank: 2, shape: [4, 12], kind: float}
+      sensory_mu: ParamTensor {rank: 2, shape: [4, 12], kind: float}
+      erev: ParamTensor {rank: 2, shape: [12, 12], kind: float}
+      sensory_erev: ParamTensor {rank: 2, shape: [4, 12], kind: float}
+      tau_n: ParamTensor {rank: 1, shape: [12], kind: float}
+      n_inf_slope: ParamTensor {rank: 1, shape: [12], kind: float}
+      n_inf_thresh: ParamTensor {rank: 1, shape: [12], kind: float}
+      input_w: ParamTensor {rank: 1, shape: [4], kind: float}
+      input_b: ParamTensor {rank: 1, shape: [4], kind: float}
+      output_w: ParamTensor {rank: 1, shape: [1], kind: float}
+      output_b: ParamTensor {rank: 1, shape: [1], kind: float}
+      sparsity_mask: Tensor {rank: 2, shape: [12, 12]}
+      sensory_sparsity_mask: Tensor {rank: 2, shape: [4, 12]}
+      input_mapping: Affine
+      output_mapping: Affine
+      ode_unfolds: 3
+      epsilon: 0.0000000001
+      implicit_param_constraints: true
+      integration_method: Euler
+      tolerance: 0.0001
+      input_size: 4
+      state_size: 12
+      motor_size: 1
+      params: 850
+    }
+    lstm_v: LSTMCell {
+        input_map: Linear {d_input: 4, d_output: 48, bias: true, params: 240}
+        recurrent_map: Linear {d_input: 12, d_output: 48, bias: false, params: 576}
+        hidden_size: 12
+        params: 816
+      }
+    lstm_n: LSTMCell {
+        input_map: Linear {d_input: 4, d_output: 48, bias: true, params: 240}
+        recurrent_map: Linear {d_input: 12, d_output: 48, bias: false, params: 576}
+        hidden_size: 12
+        params: 816
+      }
+    state_size: 12
+    sensory_size: 4
+    motor_size: 1
+    return_sequences: true
+    batch_first: true
+    mixed_memory: true
+    params: 2482
+  }
+  params: 2482
+}    
+2025-01-25T02:51:01.471269Z  INFO burn_train::learner::epoch: Executing training step for epoch 1    
+2025-01-25T02:51:01.476159Z  INFO burn_train::learner::epoch: Iteration 1    
+2025-01-25T02:51:04.674822Z  INFO burn_train::learner::epoch: Iteration 2    
+2025-01-25T02:51:07.494456Z  INFO burn_train::learner::epoch: Iteration 3    
+2025-01-25T02:51:10.465007Z  INFO burn_train::learner::epoch: Iteration 4    
+2025-01-25T02:51:13.390222Z  INFO burn_train::learner::epoch: Iteration 5    
+2025-01-25T02:51:16.206456Z  INFO burn_train::learner::epoch: Iteration 6    
+2025-01-25T02:51:18.985994Z  INFO burn_train::learner::epoch: Iteration 7    
+2025-01-25T02:51:21.780964Z  INFO burn_train::learner::epoch: Iteration 8    
+2025-01-25T02:51:24.628072Z  INFO burn_train::learner::epoch: Iteration 9    
+2025-01-25T02:51:27.511323Z  INFO burn_train::learner::epoch: Iteration 10    
+2025-01-25T02:51:30.433808Z  INFO burn_train::learner::epoch: Iteration 11    
+2025-01-25T02:51:33.372482Z  INFO burn_train::learner::epoch: Iteration 12    
+2025-01-25T02:51:36.358503Z  INFO burn_train::learner::epoch: Iteration 13    
+2025-01-25T02:51:39.256116Z  INFO burn_train::learner::epoch: Iteration 14    
+2025-01-25T02:51:42.084798Z  INFO burn_train::learner::epoch: Iteration 15    
+2025-01-25T02:51:44.988818Z  INFO burn_train::learner::epoch: Iteration 16    
+2025-01-25T02:51:47.866462Z  INFO burn_train::learner::epoch: Iteration 17    
+2025-01-25T02:51:50.719985Z  INFO burn_train::learner::epoch: Iteration 18    
+2025-01-25T02:51:53.557923Z  INFO burn_train::learner::epoch: Iteration 19    
+2025-01-25T02:51:56.361179Z  INFO burn_train::learner::epoch: Iteration 20    
+2025-01-25T02:51:59.203977Z  INFO burn_train::learner::epoch: Iteration 21    
+2025-01-25T02:52:02.063697Z  INFO burn_train::learner::epoch: Iteration 22    
+2025-01-25T02:52:04.967041Z  INFO burn_train::learner::epoch: Iteration 23    
+2025-01-25T02:52:07.855573Z  INFO burn_train::learner::epoch: Iteration 24    
+2025-01-25T02:52:10.855917Z  INFO burn_train::learner::epoch: Iteration 25    
+2025-01-25T02:52:13.957878Z  INFO burn_train::learner::epoch: Iteration 26    
+2025-01-25T02:52:16.999999Z  INFO burn_train::learner::epoch: Iteration 27    
+2025-01-25T02:52:19.908914Z  INFO burn_train::learner::epoch: Iteration 28    
+2025-01-25T02:52:22.733597Z  INFO burn_train::learner::epoch: Iteration 29    
+2025-01-25T02:52:25.576476Z  INFO burn_train::learner::epoch: Iteration 30    
+2025-01-25T02:52:28.597731Z  INFO burn_train::learner::epoch: Iteration 31    
+2025-01-25T02:52:31.626642Z  INFO burn_train::learner::epoch: Iteration 32    
+2025-01-25T02:52:34.670023Z  INFO burn_train::learner::epoch: Iteration 33    
+2025-01-25T02:52:37.654260Z  INFO burn_train::learner::epoch: Iteration 34    
+2025-01-25T02:52:40.518382Z  INFO burn_train::learner::epoch: Iteration 35    
+2025-01-25T02:52:43.361506Z  INFO burn_train::learner::epoch: Iteration 36    
+2025-01-25T02:52:46.207065Z  INFO burn_train::learner::epoch: Iteration 37    
+2025-01-25T02:52:49.032925Z  INFO burn_train::learner::epoch: Iteration 38    
+2025-01-25T02:52:51.880864Z  INFO burn_train::learner::epoch: Iteration 39    
+2025-01-25T02:52:54.742718Z  INFO burn_train::learner::epoch: Iteration 40    
+2025-01-25T02:52:57.621858Z  INFO burn_train::learner::epoch: Iteration 41    
+2025-01-25T02:53:00.547241Z  INFO burn_train::learner::epoch: Iteration 42    
+2025-01-25T02:53:03.428101Z  INFO burn_train::learner::epoch: Iteration 43    
+2025-01-25T02:53:06.253920Z  INFO burn_train::learner::epoch: Iteration 44    
+2025-01-25T02:53:09.129219Z  INFO burn_train::learner::epoch: Iteration 45    
+2025-01-25T02:53:12.014694Z  INFO burn_train::learner::epoch: Iteration 46    
+2025-01-25T02:53:14.878024Z  INFO burn_train::learner::epoch: Iteration 47    
+2025-01-25T02:53:17.753470Z  INFO burn_train::learner::epoch: Iteration 48    
+2025-01-25T02:53:20.722007Z  INFO burn_train::learner::epoch: Iteration 49    
+2025-01-25T02:53:23.771158Z  INFO burn_train::learner::epoch: Iteration 50    
+2025-01-25T02:53:26.637093Z  INFO burn_train::learner::epoch: Iteration 51    
+2025-01-25T02:53:29.499580Z  INFO burn_train::learner::epoch: Iteration 52    
+2025-01-25T02:53:32.434610Z  INFO burn_train::learner::epoch: Executing validation step for epoch 1    
+2025-01-25T02:53:40.797039Z  INFO burn_train::learner::epoch: Executing training step for epoch 2    
+2025-01-25T02:53:40.797026Z  INFO burn_train::checkpoint::file: Saving checkpoint 1 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/model-1    
+2025-01-25T02:53:40.797049Z  INFO burn_train::checkpoint::file: Saving checkpoint 1 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/optim-1    
+2025-01-25T02:53:40.797051Z  INFO burn_train::checkpoint::file: Saving checkpoint 1 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/scheduler-1    
+2025-01-25T02:53:40.799814Z  INFO burn_train::learner::epoch: Iteration 1    
+2025-01-25T02:53:43.686319Z  INFO burn_train::learner::epoch: Iteration 2    
+2025-01-25T02:53:46.603277Z  INFO burn_train::learner::epoch: Iteration 3    
+2025-01-25T02:53:49.501064Z  INFO burn_train::learner::epoch: Iteration 4    
+2025-01-25T02:53:52.353283Z  INFO burn_train::learner::epoch: Iteration 5    
+2025-01-25T02:53:55.184510Z  INFO burn_train::learner::epoch: Iteration 6    
+2025-01-25T02:53:58.064302Z  INFO burn_train::learner::epoch: Iteration 7    
+2025-01-25T02:54:00.961701Z  INFO burn_train::learner::epoch: Iteration 8    
+2025-01-25T02:54:03.831314Z  INFO burn_train::learner::epoch: Iteration 9    
+2025-01-25T02:54:06.768799Z  INFO burn_train::learner::epoch: Iteration 10    
+2025-01-25T02:54:09.664002Z  INFO burn_train::learner::epoch: Iteration 11    
+2025-01-25T02:54:12.574186Z  INFO burn_train::learner::epoch: Iteration 12    
+2025-01-25T02:54:15.391242Z  INFO burn_train::learner::epoch: Iteration 13    
+2025-01-25T02:54:18.229995Z  INFO burn_train::learner::epoch: Iteration 14    
+2025-01-25T02:54:21.069701Z  INFO burn_train::learner::epoch: Iteration 15    
+2025-01-25T02:54:23.936434Z  INFO burn_train::learner::epoch: Iteration 16    
+2025-01-25T02:54:26.789585Z  INFO burn_train::learner::epoch: Iteration 17    
+2025-01-25T02:54:29.634912Z  INFO burn_train::learner::epoch: Iteration 18    
+2025-01-25T02:54:32.597389Z  INFO burn_train::learner::epoch: Iteration 19    
+2025-01-25T02:54:35.511709Z  INFO burn_train::learner::epoch: Iteration 20    
+2025-01-25T02:54:38.372006Z  INFO burn_train::learner::epoch: Iteration 21    
+2025-01-25T02:54:41.170778Z  INFO burn_train::learner::epoch: Iteration 22    
+2025-01-25T02:54:44.087861Z  INFO burn_train::learner::epoch: Iteration 23    
+2025-01-25T02:54:46.977779Z  INFO burn_train::learner::epoch: Iteration 24    
+2025-01-25T02:54:49.885838Z  INFO burn_train::learner::epoch: Iteration 25    
+2025-01-25T02:54:52.777123Z  INFO burn_train::learner::epoch: Iteration 26    
+2025-01-25T02:54:55.660250Z  INFO burn_train::learner::epoch: Iteration 27    
+2025-01-25T02:54:58.562740Z  INFO burn_train::learner::epoch: Iteration 28    
+2025-01-25T02:55:01.442709Z  INFO burn_train::learner::epoch: Iteration 29    
+2025-01-25T02:55:04.324527Z  INFO burn_train::learner::epoch: Iteration 30    
+2025-01-25T02:55:07.258334Z  INFO burn_train::learner::epoch: Iteration 31    
+2025-01-25T02:55:10.279438Z  INFO burn_train::learner::epoch: Iteration 32    
+2025-01-25T02:55:13.166611Z  INFO burn_train::learner::epoch: Iteration 33    
+2025-01-25T02:55:16.070619Z  INFO burn_train::learner::epoch: Iteration 34    
+2025-01-25T02:55:19.114174Z  INFO burn_train::learner::epoch: Iteration 35    
+2025-01-25T02:55:21.994746Z  INFO burn_train::learner::epoch: Iteration 36    
+2025-01-25T02:55:24.920077Z  INFO burn_train::learner::epoch: Iteration 37    
+2025-01-25T02:55:27.907695Z  INFO burn_train::learner::epoch: Iteration 38    
+2025-01-25T02:55:30.914475Z  INFO burn_train::learner::epoch: Iteration 39    
+2025-01-25T02:55:33.949775Z  INFO burn_train::learner::epoch: Iteration 40    
+2025-01-25T02:55:36.860164Z  INFO burn_train::learner::epoch: Iteration 41    
+2025-01-25T02:55:39.743889Z  INFO burn_train::learner::epoch: Iteration 42    
+2025-01-25T02:55:42.688107Z  INFO burn_train::learner::epoch: Iteration 43    
+2025-01-25T02:55:45.638154Z  INFO burn_train::learner::epoch: Iteration 44    
+2025-01-25T02:55:48.535460Z  INFO burn_train::learner::epoch: Iteration 45    
+2025-01-25T02:55:51.369729Z  INFO burn_train::learner::epoch: Iteration 46    
+2025-01-25T02:55:54.167645Z  INFO burn_train::learner::epoch: Iteration 47    
+2025-01-25T02:55:57.022982Z  INFO burn_train::learner::epoch: Iteration 48    
+2025-01-25T02:55:59.925414Z  INFO burn_train::learner::epoch: Iteration 49    
+2025-01-25T02:56:02.845664Z  INFO burn_train::learner::epoch: Iteration 50    
+2025-01-25T02:56:05.756880Z  INFO burn_train::learner::epoch: Iteration 51    
+2025-01-25T02:56:08.671748Z  INFO burn_train::learner::epoch: Iteration 52    
+2025-01-25T02:56:11.545932Z  INFO burn_train::learner::epoch: Executing validation step for epoch 2    
+2025-01-25T02:56:19.801660Z  INFO burn_train::learner::epoch: Executing training step for epoch 3    
+2025-01-25T02:56:19.801653Z  INFO burn_train::checkpoint::file: Saving checkpoint 2 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/model-2    
+2025-01-25T02:56:19.801668Z  INFO burn_train::checkpoint::file: Saving checkpoint 2 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/optim-2    
+2025-01-25T02:56:19.801670Z  INFO burn_train::checkpoint::file: Saving checkpoint 2 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/scheduler-2    
+2025-01-25T02:56:19.805332Z  INFO burn_train::learner::epoch: Iteration 1    
+2025-01-25T02:56:22.670531Z  INFO burn_train::learner::epoch: Iteration 2    
+2025-01-25T02:56:25.467697Z  INFO burn_train::learner::epoch: Iteration 3    
+2025-01-25T02:56:28.325229Z  INFO burn_train::learner::epoch: Iteration 4    
+2025-01-25T02:56:31.221863Z  INFO burn_train::learner::epoch: Iteration 5    
+2025-01-25T02:56:34.121356Z  INFO burn_train::learner::epoch: Iteration 6    
+2025-01-25T02:56:37.063734Z  INFO burn_train::learner::epoch: Iteration 7    
+2025-01-25T02:56:39.896341Z  INFO burn_train::learner::epoch: Iteration 8    
+2025-01-25T02:56:42.669427Z  INFO burn_train::learner::epoch: Iteration 9    
+2025-01-25T02:56:45.479176Z  INFO burn_train::learner::epoch: Iteration 10    
+2025-01-25T02:56:48.328026Z  INFO burn_train::learner::epoch: Iteration 11    
+2025-01-25T02:56:51.211401Z  INFO burn_train::learner::epoch: Iteration 12    
+2025-01-25T02:56:54.044318Z  INFO burn_train::learner::epoch: Iteration 13    
+2025-01-25T02:56:56.892912Z  INFO burn_train::learner::epoch: Iteration 14    
+2025-01-25T02:56:59.774898Z  INFO burn_train::learner::epoch: Iteration 15    
+2025-01-25T02:57:02.697184Z  INFO burn_train::learner::epoch: Iteration 16    
+2025-01-25T02:57:05.486479Z  INFO burn_train::learner::epoch: Iteration 17    
+2025-01-25T02:57:08.294338Z  INFO burn_train::learner::epoch: Iteration 18    
+2025-01-25T02:57:11.264502Z  INFO burn_train::learner::epoch: Iteration 19    
+2025-01-25T02:57:14.232818Z  INFO burn_train::learner::epoch: Iteration 20    
+2025-01-25T02:57:17.146564Z  INFO burn_train::learner::epoch: Iteration 21    
+2025-01-25T02:57:20.054429Z  INFO burn_train::learner::epoch: Iteration 22    
+2025-01-25T02:57:22.951285Z  INFO burn_train::learner::epoch: Iteration 23    
+2025-01-25T02:57:25.798177Z  INFO burn_train::learner::epoch: Iteration 24    
+2025-01-25T02:57:28.664241Z  INFO burn_train::learner::epoch: Iteration 25    
+2025-01-25T02:57:31.515654Z  INFO burn_train::learner::epoch: Iteration 26    
+2025-01-25T02:57:34.408599Z  INFO burn_train::learner::epoch: Iteration 27    
+2025-01-25T02:57:37.293622Z  INFO burn_train::learner::epoch: Iteration 28    
+2025-01-25T02:57:40.146838Z  INFO burn_train::learner::epoch: Iteration 29    
+2025-01-25T02:57:43.022736Z  INFO burn_train::learner::epoch: Iteration 30    
+2025-01-25T02:57:45.892470Z  INFO burn_train::learner::epoch: Iteration 31    
+2025-01-25T02:57:48.795243Z  INFO burn_train::learner::epoch: Iteration 32    
+2025-01-25T02:57:51.635458Z  INFO burn_train::learner::epoch: Iteration 33    
+2025-01-25T02:57:54.449825Z  INFO burn_train::learner::epoch: Iteration 34    
+2025-01-25T02:57:57.302028Z  INFO burn_train::learner::epoch: Iteration 35    
+2025-01-25T02:58:00.106120Z  INFO burn_train::learner::epoch: Iteration 36    
+2025-01-25T02:58:03.000564Z  INFO burn_train::learner::epoch: Iteration 37    
+2025-01-25T02:58:05.937342Z  INFO burn_train::learner::epoch: Iteration 38    
+2025-01-25T02:58:08.820215Z  INFO burn_train::learner::epoch: Iteration 39    
+2025-01-25T02:58:11.689261Z  INFO burn_train::learner::epoch: Iteration 40    
+2025-01-25T02:58:14.600296Z  INFO burn_train::learner::epoch: Iteration 41    
+2025-01-25T02:58:17.430903Z  INFO burn_train::learner::epoch: Iteration 42    
+2025-01-25T02:58:20.269205Z  INFO burn_train::learner::epoch: Iteration 43    
+2025-01-25T02:58:23.119029Z  INFO burn_train::learner::epoch: Iteration 44    
+2025-01-25T02:58:25.940249Z  INFO burn_train::learner::epoch: Iteration 45    
+2025-01-25T02:58:28.785818Z  INFO burn_train::learner::epoch: Iteration 46    
+2025-01-25T02:58:31.670780Z  INFO burn_train::learner::epoch: Iteration 47    
+2025-01-25T02:58:34.555798Z  INFO burn_train::learner::epoch: Iteration 48    
+2025-01-25T02:58:37.448742Z  INFO burn_train::learner::epoch: Iteration 49    
+2025-01-25T02:58:40.296833Z  INFO burn_train::learner::epoch: Iteration 50    
+2025-01-25T02:58:43.142110Z  INFO burn_train::learner::epoch: Iteration 51    
+2025-01-25T02:58:45.928432Z  INFO burn_train::learner::epoch: Iteration 52    
+2025-01-25T02:58:48.813669Z  INFO burn_train::learner::epoch: Executing validation step for epoch 3    
+2025-01-25T02:58:57.077673Z  INFO burn_train::checkpoint::file: Saving checkpoint 3 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/model-3    
+2025-01-25T02:58:57.077700Z  INFO burn_train::checkpoint::file: Saving checkpoint 3 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/optim-3    
+2025-01-25T02:58:57.077700Z  INFO burn_train::checkpoint::file: Saving checkpoint 3 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/scheduler-3    
+2025-01-25T02:58:57.086088Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/model-1.mpk    
+2025-01-25T02:58:57.091351Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/optim-1.mpk    
+2025-01-25T02:58:57.091360Z  INFO burn_train::learner::epoch: Executing training step for epoch 4    
+2025-01-25T02:58:57.091367Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/scheduler-1.mpk    
+2025-01-25T02:58:57.093244Z  INFO burn_train::learner::epoch: Iteration 1    
+2025-01-25T02:58:59.968637Z  INFO burn_train::learner::epoch: Iteration 2    
+2025-01-25T02:59:02.887420Z  INFO burn_train::learner::epoch: Iteration 3    
+2025-01-25T02:59:05.716311Z  INFO burn_train::learner::epoch: Iteration 4    
+2025-01-25T02:59:08.513422Z  INFO burn_train::learner::epoch: Iteration 5    
+2025-01-25T02:59:11.344250Z  INFO burn_train::learner::epoch: Iteration 6    
+2025-01-25T02:59:14.167555Z  INFO burn_train::learner::epoch: Iteration 7    
+2025-01-25T02:59:16.985246Z  INFO burn_train::learner::epoch: Iteration 8    
+2025-01-25T02:59:19.873076Z  INFO burn_train::learner::epoch: Iteration 9    
+2025-01-25T02:59:22.766073Z  INFO burn_train::learner::epoch: Iteration 10    
+2025-01-25T02:59:25.642559Z  INFO burn_train::learner::epoch: Iteration 11    
+2025-01-25T02:59:28.529673Z  INFO burn_train::learner::epoch: Iteration 12    
+2025-01-25T02:59:31.344029Z  INFO burn_train::learner::epoch: Iteration 13    
+2025-01-25T02:59:34.174055Z  INFO burn_train::learner::epoch: Iteration 14    
+2025-01-25T02:59:37.039479Z  INFO burn_train::learner::epoch: Iteration 15    
+2025-01-25T02:59:39.918964Z  INFO burn_train::learner::epoch: Iteration 16    
+2025-01-25T02:59:42.804995Z  INFO burn_train::learner::epoch: Iteration 17    
+2025-01-25T02:59:45.664314Z  INFO burn_train::learner::epoch: Iteration 18    
+2025-01-25T02:59:48.579182Z  INFO burn_train::learner::epoch: Iteration 19    
+2025-01-25T02:59:51.455830Z  INFO burn_train::learner::epoch: Iteration 20    
+2025-01-25T02:59:54.273942Z  INFO burn_train::learner::epoch: Iteration 21    
+2025-01-25T02:59:57.055937Z  INFO burn_train::learner::epoch: Iteration 22    
+2025-01-25T02:59:59.935047Z  INFO burn_train::learner::epoch: Iteration 23    
+2025-01-25T03:00:02.813809Z  INFO burn_train::learner::epoch: Iteration 24    
+2025-01-25T03:00:05.712471Z  INFO burn_train::learner::epoch: Iteration 25    
+2025-01-25T03:00:08.687455Z  INFO burn_train::learner::epoch: Iteration 26    
+2025-01-25T03:00:11.755896Z  INFO burn_train::learner::epoch: Iteration 27    
+2025-01-25T03:00:14.657776Z  INFO burn_train::learner::epoch: Iteration 28    
+2025-01-25T03:00:17.540723Z  INFO burn_train::learner::epoch: Iteration 29    
+2025-01-25T03:00:20.429982Z  INFO burn_train::learner::epoch: Iteration 30    
+2025-01-25T03:00:23.294154Z  INFO burn_train::learner::epoch: Iteration 31    
+2025-01-25T03:00:26.112887Z  INFO burn_train::learner::epoch: Iteration 32    
+2025-01-25T03:00:28.962418Z  INFO burn_train::learner::epoch: Iteration 33    
+2025-01-25T03:00:31.930037Z  INFO burn_train::learner::epoch: Iteration 34    
+2025-01-25T03:00:34.808275Z  INFO burn_train::learner::epoch: Iteration 35    
+2025-01-25T03:00:37.744375Z  INFO burn_train::learner::epoch: Iteration 36    
+2025-01-25T03:00:40.558593Z  INFO burn_train::learner::epoch: Iteration 37    
+2025-01-25T03:00:43.361994Z  INFO burn_train::learner::epoch: Iteration 38    
+2025-01-25T03:00:46.217617Z  INFO burn_train::learner::epoch: Iteration 39    
+2025-01-25T03:00:49.064827Z  INFO burn_train::learner::epoch: Iteration 40    
+2025-01-25T03:00:51.926972Z  INFO burn_train::learner::epoch: Iteration 41    
+2025-01-25T03:00:54.772073Z  INFO burn_train::learner::epoch: Iteration 42    
+2025-01-25T03:00:57.641381Z  INFO burn_train::learner::epoch: Iteration 43    
+2025-01-25T03:01:00.504769Z  INFO burn_train::learner::epoch: Iteration 44    
+2025-01-25T03:01:03.404027Z  INFO burn_train::learner::epoch: Iteration 45    
+2025-01-25T03:01:06.169026Z  INFO burn_train::learner::epoch: Iteration 46    
+2025-01-25T03:01:09.051576Z  INFO burn_train::learner::epoch: Iteration 47    
+2025-01-25T03:01:11.878712Z  INFO burn_train::learner::epoch: Iteration 48    
+2025-01-25T03:01:14.855307Z  INFO burn_train::learner::epoch: Iteration 49    
+2025-01-25T03:01:17.689573Z  INFO burn_train::learner::epoch: Iteration 50    
+2025-01-25T03:01:20.622157Z  INFO burn_train::learner::epoch: Iteration 51    
+2025-01-25T03:01:23.537327Z  INFO burn_train::learner::epoch: Iteration 52    
+2025-01-25T03:01:26.447545Z  INFO burn_train::learner::epoch: Executing validation step for epoch 4    
+2025-01-25T03:01:34.811384Z  INFO burn_train::checkpoint::file: Saving checkpoint 4 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/model-4    
+2025-01-25T03:01:34.811395Z  INFO burn_train::checkpoint::file: Saving checkpoint 4 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/optim-4    
+2025-01-25T03:01:34.811398Z  INFO burn_train::checkpoint::file: Saving checkpoint 4 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/scheduler-4    
+2025-01-25T03:01:34.820038Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/model-2.mpk    
+2025-01-25T03:01:34.824398Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/optim-2.mpk    
+2025-01-25T03:01:34.824401Z  INFO burn_train::learner::epoch: Executing training step for epoch 5    
+2025-01-25T03:01:34.824408Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/scheduler-2.mpk    
+2025-01-25T03:01:34.826765Z  INFO burn_train::learner::epoch: Iteration 1    
+2025-01-25T03:01:37.719459Z  INFO burn_train::learner::epoch: Iteration 2    
+2025-01-25T03:01:40.554904Z  INFO burn_train::learner::epoch: Iteration 3    
+2025-01-25T03:01:43.439787Z  INFO burn_train::learner::epoch: Iteration 4    
+2025-01-25T03:01:46.300243Z  INFO burn_train::learner::epoch: Iteration 5    
+2025-01-25T03:01:49.155091Z  INFO burn_train::learner::epoch: Iteration 6    
+2025-01-25T03:01:52.032783Z  INFO burn_train::learner::epoch: Iteration 7    
+2025-01-25T03:01:54.882699Z  INFO burn_train::learner::epoch: Iteration 8    
+2025-01-25T03:01:57.690973Z  INFO burn_train::learner::epoch: Iteration 9    
+2025-01-25T03:02:00.516576Z  INFO burn_train::learner::epoch: Iteration 10    
+2025-01-25T03:02:03.454404Z  INFO burn_train::learner::epoch: Iteration 11    
+2025-01-25T03:02:06.349657Z  INFO burn_train::learner::epoch: Iteration 12    
+2025-01-25T03:02:09.234968Z  INFO burn_train::learner::epoch: Iteration 13    
+2025-01-25T03:02:12.245806Z  INFO burn_train::learner::epoch: Iteration 14    
+2025-01-25T03:02:15.287502Z  INFO burn_train::learner::epoch: Iteration 15    
+2025-01-25T03:02:18.166909Z  INFO burn_train::learner::epoch: Iteration 16    
+2025-01-25T03:02:21.051934Z  INFO burn_train::learner::epoch: Iteration 17    
+2025-01-25T03:02:23.972396Z  INFO burn_train::learner::epoch: Iteration 18    
+2025-01-25T03:02:26.871875Z  INFO burn_train::learner::epoch: Iteration 19    
+2025-01-25T03:02:29.724988Z  INFO burn_train::learner::epoch: Iteration 20    
+2025-01-25T03:02:32.628009Z  INFO burn_train::learner::epoch: Iteration 21    
+2025-01-25T03:02:35.543120Z  INFO burn_train::learner::epoch: Iteration 22    
+2025-01-25T03:02:38.507075Z  INFO burn_train::learner::epoch: Iteration 23    
+2025-01-25T03:02:41.398522Z  INFO burn_train::learner::epoch: Iteration 24    
+2025-01-25T03:02:44.332098Z  INFO burn_train::learner::epoch: Iteration 25    
+2025-01-25T03:02:47.161650Z  INFO burn_train::learner::epoch: Iteration 26    
+2025-01-25T03:02:50.041844Z  INFO burn_train::learner::epoch: Iteration 27    
+2025-01-25T03:02:52.946156Z  INFO burn_train::learner::epoch: Iteration 28    
+2025-01-25T03:02:55.720805Z  INFO burn_train::learner::epoch: Iteration 29    
+2025-01-25T03:02:58.572331Z  INFO burn_train::learner::epoch: Iteration 30    
+2025-01-25T03:03:01.463503Z  INFO burn_train::learner::epoch: Iteration 31    
+2025-01-25T03:03:04.318504Z  INFO burn_train::learner::epoch: Iteration 32    
+2025-01-25T03:03:07.131131Z  INFO burn_train::learner::epoch: Iteration 33    
+2025-01-25T03:03:09.902572Z  INFO burn_train::learner::epoch: Iteration 34    
+2025-01-25T03:03:12.692041Z  INFO burn_train::learner::epoch: Iteration 35    
+2025-01-25T03:03:15.518955Z  INFO burn_train::learner::epoch: Iteration 36    
+2025-01-25T03:03:18.349706Z  INFO burn_train::learner::epoch: Iteration 37    
+2025-01-25T03:03:21.196103Z  INFO burn_train::learner::epoch: Iteration 38    
+2025-01-25T03:03:24.052691Z  INFO burn_train::learner::epoch: Iteration 39    
+2025-01-25T03:03:26.877727Z  INFO burn_train::learner::epoch: Iteration 40    
+2025-01-25T03:03:29.698577Z  INFO burn_train::learner::epoch: Iteration 41    
+2025-01-25T03:03:32.505053Z  INFO burn_train::learner::epoch: Iteration 42    
+2025-01-25T03:03:35.354677Z  INFO burn_train::learner::epoch: Iteration 43    
+2025-01-25T03:03:38.226981Z  INFO burn_train::learner::epoch: Iteration 44    
+2025-01-25T03:03:41.052527Z  INFO burn_train::learner::epoch: Iteration 45    
+2025-01-25T03:03:43.923282Z  INFO burn_train::learner::epoch: Iteration 46    
+2025-01-25T03:03:46.902600Z  INFO burn_train::learner::epoch: Iteration 47    
+2025-01-25T03:03:49.879788Z  INFO burn_train::learner::epoch: Iteration 48    
+2025-01-25T03:03:52.818471Z  INFO burn_train::learner::epoch: Iteration 49    
+2025-01-25T03:03:55.693274Z  INFO burn_train::learner::epoch: Iteration 50    
+2025-01-25T03:03:58.549652Z  INFO burn_train::learner::epoch: Iteration 51    
+2025-01-25T03:04:01.444313Z  INFO burn_train::learner::epoch: Iteration 52    
+2025-01-25T03:04:04.324247Z  INFO burn_train::learner::epoch: Executing validation step for epoch 5    
+2025-01-25T03:04:12.609916Z  INFO burn_train::checkpoint::file: Saving checkpoint 5 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/model-5    
+2025-01-25T03:04:12.609934Z  INFO burn_train::checkpoint::file: Saving checkpoint 5 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/optim-5    
+2025-01-25T03:04:12.609938Z  INFO burn_train::checkpoint::file: Saving checkpoint 5 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/scheduler-5    
+2025-01-25T03:04:12.617486Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/model-3.mpk    
+2025-01-25T03:04:12.620810Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/optim-3.mpk    
+2025-01-25T03:04:12.620814Z  INFO burn_train::learner::epoch: Executing training step for epoch 6    
+2025-01-25T03:04:12.620827Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/scheduler-3.mpk    
+2025-01-25T03:04:12.622518Z  INFO burn_train::learner::epoch: Iteration 1    
+2025-01-25T03:04:15.477272Z  INFO burn_train::learner::epoch: Iteration 2    
+2025-01-25T03:04:18.450910Z  INFO burn_train::learner::epoch: Iteration 3    
+2025-01-25T03:04:21.295314Z  INFO burn_train::learner::epoch: Iteration 4    
+2025-01-25T03:04:24.150947Z  INFO burn_train::learner::epoch: Iteration 5    
+2025-01-25T03:04:27.140430Z  INFO burn_train::learner::epoch: Iteration 6    
+2025-01-25T03:04:30.046920Z  INFO burn_train::learner::epoch: Iteration 7    
+2025-01-25T03:04:33.023959Z  INFO burn_train::learner::epoch: Iteration 8    
+2025-01-25T03:04:35.975058Z  INFO burn_train::learner::epoch: Iteration 9    
+2025-01-25T03:04:38.852742Z  INFO burn_train::learner::epoch: Iteration 10    
+2025-01-25T03:04:41.734256Z  INFO burn_train::learner::epoch: Iteration 11    
+2025-01-25T03:04:44.656113Z  INFO burn_train::learner::epoch: Iteration 12    
+2025-01-25T03:04:47.493803Z  INFO burn_train::learner::epoch: Iteration 13    
+2025-01-25T03:04:50.463217Z  INFO burn_train::learner::epoch: Iteration 14    
+2025-01-25T03:04:53.289056Z  INFO burn_train::learner::epoch: Iteration 15    
+2025-01-25T03:04:56.129609Z  INFO burn_train::learner::epoch: Iteration 16    
+2025-01-25T03:04:58.933510Z  INFO burn_train::learner::epoch: Iteration 17    
+2025-01-25T03:05:01.832285Z  INFO burn_train::learner::epoch: Iteration 18    
+2025-01-25T03:05:04.724613Z  INFO burn_train::learner::epoch: Iteration 19    
+2025-01-25T03:05:07.652228Z  INFO burn_train::learner::epoch: Iteration 20    
+2025-01-25T03:05:10.661525Z  INFO burn_train::learner::epoch: Iteration 21    
+2025-01-25T03:05:13.531591Z  INFO burn_train::learner::epoch: Iteration 22    
+2025-01-25T03:05:16.406891Z  INFO burn_train::learner::epoch: Iteration 23    
+2025-01-25T03:05:19.484549Z  INFO burn_train::learner::epoch: Iteration 24    
+2025-01-25T03:05:22.370929Z  INFO burn_train::learner::epoch: Iteration 25    
+2025-01-25T03:05:25.330742Z  INFO burn_train::learner::epoch: Iteration 26    
+2025-01-25T03:05:28.430590Z  INFO burn_train::learner::epoch: Iteration 27    
+2025-01-25T03:05:31.664924Z  INFO burn_train::learner::epoch: Iteration 28    
+2025-01-25T03:05:34.729863Z  INFO burn_train::learner::epoch: Iteration 29    
+2025-01-25T03:05:37.596060Z  INFO burn_train::learner::epoch: Iteration 30    
+2025-01-25T03:05:40.399386Z  INFO burn_train::learner::epoch: Iteration 31    
+2025-01-25T03:05:43.219542Z  INFO burn_train::learner::epoch: Iteration 32    
+2025-01-25T03:05:46.136298Z  INFO burn_train::learner::epoch: Iteration 33    
+2025-01-25T03:05:49.017512Z  INFO burn_train::learner::epoch: Iteration 34    
+2025-01-25T03:05:52.026137Z  INFO burn_train::learner::epoch: Iteration 35    
+2025-01-25T03:05:54.901839Z  INFO burn_train::learner::epoch: Iteration 36    
+2025-01-25T03:05:57.740745Z  INFO burn_train::learner::epoch: Iteration 37    
+2025-01-25T03:06:00.578209Z  INFO burn_train::learner::epoch: Iteration 38    
+2025-01-25T03:06:03.456457Z  INFO burn_train::learner::epoch: Iteration 39    
+2025-01-25T03:06:06.355001Z  INFO burn_train::learner::epoch: Iteration 40    
+2025-01-25T03:06:09.271838Z  INFO burn_train::learner::epoch: Iteration 41    
+2025-01-25T03:06:12.308020Z  INFO burn_train::learner::epoch: Iteration 42    
+2025-01-25T03:06:15.183310Z  INFO burn_train::learner::epoch: Iteration 43    
+2025-01-25T03:06:18.047242Z  INFO burn_train::learner::epoch: Iteration 44    
+2025-01-25T03:06:20.935000Z  INFO burn_train::learner::epoch: Iteration 45    
+2025-01-25T03:06:23.785289Z  INFO burn_train::learner::epoch: Iteration 46    
+2025-01-25T03:06:26.636762Z  INFO burn_train::learner::epoch: Iteration 47    
+2025-01-25T03:06:29.660490Z  INFO burn_train::learner::epoch: Iteration 48    
+2025-01-25T03:06:32.687575Z  INFO burn_train::learner::epoch: Iteration 49    
+2025-01-25T03:06:35.818912Z  INFO burn_train::learner::epoch: Iteration 50    
+2025-01-25T03:06:38.936277Z  INFO burn_train::learner::epoch: Iteration 51    
+2025-01-25T03:06:42.039000Z  INFO burn_train::learner::epoch: Iteration 52    
+2025-01-25T03:06:44.898677Z  INFO burn_train::learner::epoch: Executing validation step for epoch 6    
+2025-01-25T03:06:52.951934Z  INFO burn_train::checkpoint::file: Saving checkpoint 6 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/optim-6    
+2025-01-25T03:06:52.951926Z  INFO burn_train::checkpoint::file: Saving checkpoint 6 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/model-6    
+2025-01-25T03:06:52.951940Z  INFO burn_train::checkpoint::file: Saving checkpoint 6 to ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/scheduler-6    
+2025-01-25T03:06:52.958966Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/model-4.mpk    
+2025-01-25T03:06:52.962295Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/optim-4.mpk    
+2025-01-25T03:06:52.962308Z  INFO burn_train::checkpoint::file: Removing checkpoint ./output/wave_model_38_a7e073f9-9593-4f8d-ac03-83d352a01988/checkpoint/scheduler-4.mpk    

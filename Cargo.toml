@@ -1,0 +1,26 @@
+[package]
+name = "synapse"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+burn = { version = "0.15.0", features = ["train", "ndarray", "wgpu"] }
+rand = "0.8.5"
+thiserror = "1.0"
+petgraph = "0.6"
+dot = "0.1"  # For exporting to DOT format
+plotters = "0.3.3"
+burn-tch = "0.15.0"
+burn-autodiff = "0.15.0"
+chrono = "0.4.38"
+rand_distr = "0.4.3"
+rustfft = "6.2.0"
+serde_json = "1.0.132"
+image = "0.25.5"
+plotters-backend = "0.3.7"
+plotly = "0.10.0"
+regex = "1.11.1"
+uuid = "1.11.1"
+midly = "0.5.3"
+anyhow = "1.0.95"
+walkdir = "2.5.0"
