@@ -53,13 +53,17 @@ LTC and CFC cells are computed on top of a network scaffold (a wiring)
     refactorr wiring for simplicity and more features
   
     can create any number of layers
-    can create fanout connections to any other layer, thus enabling the ability to create thalamus like regions in a wiring
+
+    fanout connections can be defined to any other layer, thus enabling the ability to create thalamus like regions in a wiring
 
     see examples/composite_waves_ltc_v2.rs
   
     ```cargo run --example composite_waves_ltc_v2```
 
     mammalian cortex connection sparsity is around 90%, and the ratio of excitatory/inhibitory synapses is around 80/20
+
+next steps:
+wiring::v3 with multiple sensory layers
 
 
 
