@@ -62,9 +62,9 @@ LTC and CFC cells are computed on top of a network scaffold (a wiring)
 
     mammalian cortex connection sparsity is around 90%, and the ratio of excitatory/inhibitory synapses is around 80/20
 
-next steps:
-wiring::v3 with multiple sensory/motor layers
+- wiring::v3
 
+    prototype, multimodal sensory and motor wiring
 
 
 - cells::v1::s4d
@@ -76,3 +76,7 @@ wiring::v3 with multiple sensory/motor layers
 ## src/flow_matching:
 
 next step, implement ltc and s4d on flow matching generation
+
+## src/inr:
+
+implicit neural representation playground. Wire (https://arxiv.org/abs/2301.05187) and Periodic Auto Encoder (https://dl.acm.org/doi/10.1145/3528223.3530178, https://www.ianxmason.com/posts/PAE/)
