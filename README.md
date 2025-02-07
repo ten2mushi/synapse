@@ -2,20 +2,6 @@
 
 burn rust (bio inspired) dl model zoo
 
-ltc https://arxiv.org/abs/2006.04439
-
-cfc https://www.nature.com/articles/s42256-022-00556-7
-
-ncp https://www.nature.com/articles/s42256-020-00237-3
-
-s4d https://arxiv.org/abs/2209.12951
-
-
-python reference:
-
-https://github.com/mlech26l/ncps
-
-https://github.com/facebookresearch/flow_matching
 
 
 ## src/cells and src/wiring:
@@ -76,6 +62,23 @@ LTC and CFC cells are computed on top of a network scaffold (a wiring)
 ## src/flow_matching:
 
 next step, implement ltc and s4d on flow matching generation
+
+
+
+ltc https://arxiv.org/abs/2006.04439
+
+cfc https://www.nature.com/articles/s42256-022-00556-7
+
+ncp https://www.nature.com/articles/s42256-020-00237-3
+
+s4d https://arxiv.org/abs/2209.12951
+
+
+python reference:
+
+https://github.com/mlech26l/ncps
+
+https://github.com/facebookresearch/flow_matching
 
 ## src/inr:
 
