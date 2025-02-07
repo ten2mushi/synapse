@@ -62,7 +62,7 @@ LTC and CFC cells are computed on top of a network scaffold (a wiring)
 
     mammalian cortex connection sparsity is around 90%, and the ratio of excitatory/inhibitory synapses is around 80/20
 
-- wiring::v3
+- wiring::v4
 
     prototype, multimodal sensory and motor wiring
 
