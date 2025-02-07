@@ -1,6 +1,6 @@
 # synapse
 
-burn rust bio inspired model zoo
+burn rust (bio inspired) dl model zoo
 
 ltc https://arxiv.org/abs/2006.04439
 
